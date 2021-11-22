@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-4 mt-5 mx-auto">
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input formControlName="email" type="text" class="form-control" id="email" ngModel>
+        <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched || form.get('email')?.dirty">
+          <div *ngIf="form.get('email')?.getError('required')">This field is Required</div>
+          <div *ngIf="form.get('email')?.getError('email')">This field should be an email</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="password" ngModel>
+      </div>
+
+
+      <br>
+
+      <button class="btn btn-block btn-primary" type="submit" [disabled]="form.invalid">
+        Login
+      </button>
+
+    </form>
+  </div>
+</div>
