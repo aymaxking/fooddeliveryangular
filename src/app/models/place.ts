@@ -1,6 +1,9 @@
+import {Menu} from "./menu";
+
 export interface Place {
-  placeId?: string;
+  id?: string;
   title: string;
   description: string;
   img: string;
+  menus: Menu[];
 }

@@ -10,10 +10,21 @@
 <div class="row ">
   <div class="col-md-6" *ngFor="let place of places">
     <div class="card border-primary mb-3" >
-      <div class="card-header">{{place.title}}</div>
-      <div class="card-body">
-        <p class="card-text">{{place.description}}</p>
+      <div class="card-header">{{place.title}} ( {{place.description}})</div>
+      <div class="card-body" >
+        <p class="card-text">Menu : </p>
       </div>
+      <ul>
+        <li *ngFor="let menu of place.menus">
+          {{menu.title}}
+          <ul>
+            <li *ngFor="let submenu of menu.subMenus">
+              {{submenu.title}} -
+              {{submenu.price}} DH
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

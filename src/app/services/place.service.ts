@@ -10,6 +10,6 @@ export class PlaceService {
   constructor(private http: HttpClient) { }
 
   getAll(){
-   return  this.http.get(environment.apiUrl+"/places")
+   return  this.http.get(environment.apiUrl+"/rest/places")
   }
 }
