@@ -12,4 +12,7 @@ export class PlaceService {
   getAll(){
    return  this.http.get(environment.apiUrl+"/rest/places")
   }
+  getById(id:number){
+    return  this.http.get(environment.apiUrl+"/rest/places/"+id)
+  }
 }

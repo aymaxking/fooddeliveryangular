@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddPlaceComponent } from './components/add-place/add-place.component';
-import { EditPlaceComponent } from './components/edit-place/edit-place.component';
-import { ListPlaceComponent } from './components/list-place/list-place.component';
+import { AddPlaceComponent } from './components/admin/places/add-place/add-place.component';
+import { EditPlaceComponent } from './components/admin/places/edit-place/edit-place.component';
+import { ListPlaceComponent } from './components/admin/places/list-place/list-place.component';
 import { NavbarComponent } from './components/partials/navbar/navbar.component';
 import { PageNotFoundComponent } from './components/partials/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {JwtInterceptor} from "./services/jwt.interceptor";
+import { PlaceIndexComponent } from './components/place/place-index/place-index.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {JwtInterceptor} from "./services/jwt.interceptor";
     NavbarComponent,
     PageNotFoundComponent,
     LoginComponent,
+    PlaceIndexComponent,
 
   ],
   imports: [

@@ -1,6 +1,6 @@
 import {Menu} from "./menu";
 
-export interface Place {
+ export interface Place {
   id?: string;
   title: string;
   description: string;
