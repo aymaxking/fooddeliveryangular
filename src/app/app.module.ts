@@ -13,6 +13,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {JwtInterceptor} from "./services/jwt.interceptor";
 import { PlaceIndexComponent } from './components/place/place-index/place-index.component';
+import {ListMenuComponent} from "./components/place/menu/list-menu/list-menu.component";
+import {AddMenuComponent} from "./components/place/menu/add-menu/add-menu.component";
+import {EditMenuComponent} from "./components/place/menu/edit-menu/edit-menu.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { PlaceIndexComponent } from './components/place/place-index/place-index.
     PageNotFoundComponent,
     LoginComponent,
     PlaceIndexComponent,
-
+    ListMenuComponent,
+    AddMenuComponent,
+    EditMenuComponent
   ],
   imports: [
     BrowserModule,
